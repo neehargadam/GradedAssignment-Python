@@ -24,7 +24,7 @@ def index():
     return render_template('passwordstrength.html', message='', cpu_percentage=cpu_percentage)
 
 if __name__ == '__main__':
-    threshold = 80  # Set the CPU usage threshold (e.g., 80%)
+    threshold = 80  # threshold = 40 , threshold = 20
     t = threading.Thread(target=monitor_cpu, args=(threshold,))
     t.start()
     app.run(debug=True)
